@@ -1,3 +1,5 @@
+%bcond_with	tests # broken
+#
 %define 	module	pyliblzma
 Summary:	Platform independent python bindings for the LZMA compression library
 Name:		python-%{module}
@@ -28,6 +30,10 @@ Lasse Collin's xz / lzma utils.
 python setup.py build \
 	--debug
 
+%if %{with tests}
+python setup.py test
+%endif
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitedir},%{_examplesdir}/%{name}-%{version}}
@@ -45,6 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc NEWS README THANKS
 %attr(755,root,root) %{py_sitedir}/*.so
 %{py_sitedir}/*.py[co]
 %{py_sitedir}/pyliblzma-*.egg-info
