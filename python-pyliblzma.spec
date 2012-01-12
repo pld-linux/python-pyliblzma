@@ -3,12 +3,12 @@
 %define 	module	pyliblzma
 Summary:	Platform independent python bindings for the LZMA compression library
 Name:		python-%{module}
-Version:	0.5.2
-Release:	4
+Version:	0.5.3
+Release:	1
 License:	LGPL v3
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/p/pyliblzma/%{module}-%{version}.tar.bz2
-# Source0-md5:	8e5596bc60e784c74f10e94820655336
+# Source0-md5:	500f61116ee1ab4063b49c121786863a
 URL:		https://launchpad.net/pyliblzma
 BuildRequires:	pkgconfig
 BuildRequires:	python >= 1:2.5
