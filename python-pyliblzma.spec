@@ -10,6 +10,7 @@ Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/p/pyliblzma/%{module}-%{version}.tar.bz2
 # Source0-md5:	500f61116ee1ab4063b49c121786863a
 URL:		https://launchpad.net/pyliblzma
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	pkgconfig
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel >= 1:2.5
